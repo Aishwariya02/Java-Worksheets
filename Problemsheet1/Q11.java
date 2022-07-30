@@ -1,4 +1,4 @@
-class Prime{
+class Q11{
     
     static boolean checkPrime(int n)
     {
