@@ -1,4 +1,4 @@
-class Matrix{
+class Q10{
     public static void main(String[] args) {
         int arr[][] = { {4,7,1,8},
                         {3,8,9,5},
