@@ -16,6 +16,7 @@ public class RushOrder extends Orders{
     public RushOrder()
     {
         super();
+        this.deliveryDay = 4;
     }
     int getTotal()
     {
