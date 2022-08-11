@@ -13,10 +13,10 @@ import java.util.*;
 
 public class RushOrder extends Orders{
     protected int deliveryDay;
-    public RushOrder()
+    public RushOrder(int d)
     {
         super();
-        this.deliveryDay = 4;
+        this.deliveryDay = d;
     }
     int getTotal()
     {
