@@ -8,7 +8,42 @@ public class OrdersApplication {
 
     public static void main(String[] args) 
     {
-        Orders O[];
+        //Orders O[];
+        Orders O[] = new Orders[4];
+        O[0] = new Orders();
+        O[1] = new RushOrder(1);
+        O[2] = new RushOrder(2);
+        O[3] = new RushOrder(3);
+        int max = 100;
+        int min = 50;
+        Scanner sc = new Scanner(System.in);
+        while(true)
+        {    
+            System.out.println("Enter UPSC code of item or type done to exit: ");
+            String code = sc.nextLine();
+            if(!"done".equals(code))
+            {
+                System.out.println("Enter quantity: ");
+                int quantity = sc.nextInt();
+                int price = (int)(Math.random()*(max-min+1)+min);
+                OrderItem O1 = new OrderItem(code,quantity,price);
+                int deliveryday = (int)(Math.random()*(7-1+1)+1);
+                if(deliveryday >= 4)
+                {
+                    O[0].addOrderItem(O1);
+                }
+                else if(deliveryday == 1)
+                {
+                    RushOrder R1 = new RushOrder(1);
+                    O[1].addOrderItem(R1);
+                }
+            }
+            else
+            {
+                break;
+            }
+            
+        }
         
     }
     
