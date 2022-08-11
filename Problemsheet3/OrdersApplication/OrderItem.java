@@ -15,9 +15,22 @@ public class OrderItem
     int quantity;
     int price;
     
+    public OrderItem(String str,int q,int p)
+    {
+        upc = str;
+        quantity = q;
+        price = p;
+    }
+    
     int getCost()
     {
         return quantity*price;
+    }
+    
+    public String toString()
+    {
+        return "Upc no: " + upc + "\nQuantity: " + quantity
+                + "\nPrice: " + price + "\n";
     }
     
 }
